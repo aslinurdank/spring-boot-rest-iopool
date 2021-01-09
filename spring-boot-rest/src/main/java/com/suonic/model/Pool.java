@@ -8,6 +8,19 @@ import java.io.Serializable;
 @Entity
 @Table(name = "POOL")
 public class Pool implements Serializable {
+	
+	@Column(name = "CARDID")
+	String CARDID;
+	@Column(name = "CHECKDATE")
+	Date CHECKDATE;
+	@Column(name = "HOUR")
+	String HOUR;
+	@Column(name = "TERMINALID")
+	int TERMINALID;
+	@Column(name = "TERMINAL")
+	String TERMINAL;
+	@Column(name = "DEPARTMENTID")
+	int DEPARTMENTID;
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,28 +35,28 @@ public class Pool implements Serializable {
 		this.id = id;
 	}
 
-	public String getTCKIMLIKNO() {
-		return TCKIMLIKNO;
+	public String getCARDID() {
+		return CARDID;
 	}
 
-	public void setTCKIMLIKNO(String tCKIMLIKNO) {
-		TCKIMLIKNO = tCKIMLIKNO;
+	public void setCARDID(String cARDID) {
+		CARDID = cARDID;
 	}
 
-	public Date getTARIH() {
-		return TARIH;
+	public Date getCHECKDATE() {
+		return CHECKDATE;
 	}
 
-	public void setTARIH(Date tARIH) {
-		TARIH = tARIH;
+	public void setCHECKDATE(Date cHECKDATE) {
+		CHECKDATE = cHECKDATE;
 	}
 
-	public String getSAAT() {
-		return SAAT;
+	public String getHOUR() {
+		return HOUR;
 	}
 
-	public void setSAAT(String sAAT) {
-		SAAT = sAAT;
+	public void setHOUR(String hOUR) {
+		HOUR = hOUR;
 	}
 
 	public int getTERMINALID() {
@@ -62,25 +75,14 @@ public class Pool implements Serializable {
 		TERMINAL = tERMINAL;
 	}
 
-	public int getBIRIMID() {
-		return BIRIMID;
+	public int getDEPARTMENTID() {
+		return DEPARTMENTID;
 	}
 
-	public void setBIRIMID(int bIRIMID) {
-		BIRIMID = bIRIMID;
+	public void setDEPARTMENTID(int dEPARTMENTID) {
+		DEPARTMENTID = dEPARTMENTID;
 	}
 
-	@Column(name = "TCKIMLIKNO")
-	String TCKIMLIKNO;
-	@Column(name = "TARIH")
-	Date TARIH;
-	@Column(name = "SAAT")
-	String SAAT;
-	@Column(name = "TERMINALID")
-	int TERMINALID;
-	@Column(name = "TERMINAL")
-	String TERMINAL;
-	@Column(name = "BIRIMID")
-	int BIRIMID;
+	
 
 }
